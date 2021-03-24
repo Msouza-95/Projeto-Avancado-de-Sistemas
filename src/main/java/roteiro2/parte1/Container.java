@@ -10,9 +10,9 @@ package roteiro2.parte1;
  * @author MSOUZA
  */
 public abstract class Container {
-    public abstract void addContainer(Component c);
+    public abstract void addComponent(Component c);
     
-    public abstract void removeContainer(Component c);
+    public abstract void removeComponent(Component c);
     
     public abstract void doLayout(); 
     

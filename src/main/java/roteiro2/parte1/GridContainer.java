@@ -17,17 +17,18 @@ public class GridContainer extends Container {
     
     public GridContainer (int lineMax , int columnMax){
         this.lineMax = lineMax;
-        this.columnMax = columnMax;   
+        this.columnMax = columnMax;  
+        this.elements = new Component[lineMax][columnMax];
     }
     
     @Override 
-    public void addContainer(Component c){
+    public void addComponent(Component c){
         if( this.lineCount == this.lineMax && this.columnCount == this.columnMax ){
                 System.out.println("Não é possivel add novos elementos");
         }else{
             this.elements[this.lineCount][this.columnCount]=c; 
             this.columnCount ++; 
-            if(this.columnCount==this.columnMax){
+            if(columnCount==this.columnMax){
                 this.lineCount ++; 
                if(this.lineCount < this.lineMax){
                    this.columnCount = 0; 
@@ -36,7 +37,7 @@ public class GridContainer extends Container {
         }
     }
     @Override
-    public void removeContainer(Component c){
+    public void removeComponent(Component c){
         for(int i =0 ; i<this.lineMax;i++){
             for(int j=0 ;j <this.columnMax;j++){
                 if (this.elements[i][j]== c){

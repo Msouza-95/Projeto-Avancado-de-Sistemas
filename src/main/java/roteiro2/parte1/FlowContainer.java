@@ -17,13 +17,13 @@ public class FlowContainer extends Container  {
     }
     
     @Override
-    public void addContainer(Component c){
+    public void addComponent(Component c){
         this.elements.add(c);
         
     } 
     
     @Override
-    public void removeContainer(Component c){
+    public void removeComponent(Component c){
         this.elements.remove(c);
         
     } 
