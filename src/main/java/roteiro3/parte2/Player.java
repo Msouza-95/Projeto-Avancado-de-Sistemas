@@ -1,5 +1,5 @@
 
-package roteiro3.parte1;
+package roteiro3.parte2;
 
 /**
  *
@@ -19,6 +19,10 @@ public  abstract class Player {
     
     public void estiloCompetidor(){
         System.out.println(this.name + " Very Competitive");
+    }
+    
+    public void correr(){
+        System.out.println(this.name + " Runs a lot during the game");
     }
     
     public abstract void definirTatica();
