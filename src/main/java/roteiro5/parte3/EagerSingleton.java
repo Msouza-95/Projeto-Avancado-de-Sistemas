@@ -9,7 +9,7 @@ public class EagerSingleton {
     
     private static EagerSingleton instance = new EagerSingleton();
     
-    EagerSingleton(){
+    private EagerSingleton(){
     }
     
     public static EagerSingleton getInstance(){
