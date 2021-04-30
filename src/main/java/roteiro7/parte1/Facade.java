@@ -1,5 +1,7 @@
 
-package roteiro6.parte3;
+package roteiro7.parte1;
+
+
 
 /**
  *
@@ -9,10 +11,15 @@ public class Facade {
     private DataBase db;
     private Cliente cliente;
     private Produto produto;
+    private static Facade instance = new Facade();
     
     
-    public Facade(){
+     private Facade(){
         this.db = new DataBase();
+    }
+    
+    public static Facade getInstance(){
+        return instance;
     }
     
     public void registrarCliente(String name, int id){
